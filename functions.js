@@ -4,6 +4,9 @@
  * @return {string} the number as a string
  */
 
+function numberToString(n){
+	return n.toString();
+}
 
 /**
  * Adds one to a given number.
@@ -11,6 +14,9 @@
  * @return {number}
  */
 
+function increase (n){
+	return ++n;
+}
 
 /**
  * Subtracts one from a given number.
@@ -18,6 +24,9 @@
  * @return {number}
  */
 
+function decrease (n){
+	return --n;
+}
 
 /**
  * Adds two numbers.
@@ -26,6 +35,9 @@
  * @return {number} the sum
  */
 
+function add (x,y){
+	return x + y;
+}
 
 /**
  * Subtracts the second number from the first.
@@ -34,7 +46,9 @@
  * @return {number} the difference
  */
 
-
+function subtract (x,y){
+	return x - y;
+}
 /**
  * Multiplies two numbers.
  * @param {number} x
@@ -43,6 +57,10 @@
  */
 
 
+function multiply (x, y){
+	return x * y;
+}
+
 /**
  * Divides the first number by the second.
  * @param {number} x
@@ -50,6 +68,9 @@
  * @return {number} the quotient
  */
 
+function divide (x,y){
+	return x / y;
+}
 
 /**
  * Multiplies a number by itself.
@@ -57,7 +78,9 @@
  * @return {number} squared
  */
 
-
+function square (x,y){
+	return x * x;
+}
 /**
  * Performs a mathematical operation on two numbers.
  * Also prints out the equation: (i.e.) "1 + 5 = 6" or "8 / 2 = 4".
@@ -66,6 +89,16 @@
  * @param {number} y
  * @return {number} the result
  */
+
+ var result;
+ var equation;
+
+ function calculate (operation, x,y){
+ 	if (operation === "add"){
+ 		result = add(x,y);
+ 		equation = x + y + "=" + result;
+ 	}
+ }
 
 
 /**

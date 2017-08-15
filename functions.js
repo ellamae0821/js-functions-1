@@ -216,6 +216,23 @@ function isOdd (n){
  */
 
 
+function letterGrade (score, maxScore){
+	var percent = score / maxScore;
+	var scoreCard;
+
+	if (percent >= .90){
+		scoreCard = "A";
+	}else if (percent >= .80){
+		scoreCard = "B"; 
+	}else if (percent >= .70){
+		scoreCard = "C";
+	}else if (percent >= .60){
+		scoreCard = "D";
+	}else if (percent <= .59){
+		scoreCard = "F";
+	}
+	return (scoreCard);
+}
 /**
  * Checks if a `restaurant` object has a `reviews` property.
  * If it does, increase the property's `reviews` value by 1.
@@ -224,7 +241,14 @@ function isOdd (n){
  * @return {object} restaurant
  */
 
-
+function incrementReviews (restaurant){
+	if (typeof restaurant.reviews === "number"){
+		restaurant.reviews ++;
+	}else{
+		restaurant.reviews = 1;
+	}
+	return restaurant;
+}
 /**
  * Joins two strings with a space.
  * @param {string} word1
@@ -232,6 +256,9 @@ function isOdd (n){
  * @return {string} joined the words joined with a space
  */
 
+function combine (word1, word2){
+	return word1 + " " + word2;
+}
 
 /**
  * Returns a circle object with the properties `circumference` and `area`.
@@ -241,3 +268,10 @@ function isOdd (n){
  * @return {object} circle
  */
 
+function createCircle (radius){
+	var circle = {
+		circumference: 2 * Math.PI * radius,
+		area: Math.PI * square(radius)
+	};
+	return circle;
+}

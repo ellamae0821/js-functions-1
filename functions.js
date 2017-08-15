@@ -78,7 +78,7 @@ function divide (x,y){
  * @return {number} squared
  */
 
-function square (x,y){
+function square (x){
 	return x * x;
 }
 /**
@@ -96,8 +96,22 @@ function square (x,y){
  function calculate (operation, x,y){
  	if (operation === "add"){
  		result = add(x,y);
- 		equation = x + y + "=" + result;
+ 		equation = x + " + " + y + " = " + result;
  	}
+ 	else if (operation === "subtract"){
+ 		result = subtract(x,y);
+ 		equation = x + " - " + y + " = " + result;
+ 	}
+ 	else if (operation === "multiply"){
+ 		result = multiply(x,y);
+ 		equation = x + " * " + y + " = " + result;
+ 	}
+ 	else if (operation === "divide"){
+ 		result = divide(x,y);
+ 		equation = x + " / " + y + " = " + result;
+ 	}
+ 	console.log(equation);
+ 	return(result);
  }
 
 
@@ -108,6 +122,9 @@ function square (x,y){
  * @return {boolean} `a` is larger than `b`
  */
 
+function isGreaterThan (a,b){
+	return (a>b);
+}
 
 /**
  * Returns true if `a` is less than `b`.
@@ -116,6 +133,9 @@ function square (x,y){
  * @return {boolean} `a` is smaller than `b`
  */
 
+function isLessThan (a,b) {
+	return (a<b);
+}
 
 /**
  * Returns true if `a` and `b` are equal.
@@ -123,6 +143,10 @@ function square (x,y){
  * @param {number} b
  * @return {boolean} the numbers are equal
  */
+
+ function areEqual (a,b){
+ 	return (a === b);
+ }
 
 
 /**
@@ -132,6 +156,13 @@ function square (x,y){
  * @return {number} the smallest number
  */
 
+function minimum (x,y){
+	if (x >= y){
+		return y;
+	}else{
+		return x;
+	}
+}
 
 /**
  * Returns the largest value of two numbers.
@@ -139,6 +170,13 @@ function square (x,y){
  * @param {number} y
  * @return {number} the largest number
  */
+function maximum (x,y){
+	if (x <= y){
+		return y;
+	}else{
+		return x;
+	}
+}
 
 
 /**
@@ -148,12 +186,22 @@ function square (x,y){
  */
 
 
+function isEven (n){
+	if (n%2 === 0){
+		return true;
+	}
+}
+
 /**
  * Returns true if `n` is odd.
  * @param {number} n
  * @return {boolean} the number is odd
  */
-
+function isOdd (n){
+	if (n%2 != 0){
+		return true;
+	}
+}
 
 /**
  * Returns a letter grade.
